@@ -157,16 +157,24 @@
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Image Box -->
                 <div class="relative">
                     <div class="bg-white/20 rounded-3xl shadow-2xl p-5 hover-lift">
-                        <img src="https://education.jnto.go.jp/cms/wp-content/uploads/2021/11/school_uniform_01m.jpg"
-                            alt="Professional Uniforms" class="w-full h-80 object-cover rounded-2xl">
+                        <!-- Slideshow Image -->
+                        <img id="slideshow-image"
+                            src="https://education.jnto.go.jp/cms/wp-content/uploads/2021/11/school_uniform_01m.jpg"
+                            alt="Professional Uniforms"
+                            class="w-full h-80 object-cover rounded-2xl transition-opacity duration-700 ease-in-out">
+
                         <div class="mt-6 text-center">
                             <h3 class="text-xl font-bold text-gray-100 mb-2">Trusted by 500+ Companies</h3>
                             <p class="text-gray-100">Delivering excellence since 2010</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Text Section -->
                 <div class="text-center lg:text-left text-white" data-aos="fade-right">
                     <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                         Premium <span class="gradient-text">Uniform Solutions</span>
@@ -188,7 +196,7 @@
                         </a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -825,6 +833,31 @@
             observer.observe(el);
         });
     </script>
+
+    <!-- slide show  -->
+
+    <!-- Slideshow Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = [
+      "https://education.jnto.go.jp/cms/wp-content/uploads/2021/11/school_uniform_01m.jpg",
+      "https://tse1.mm.bing.net/th/id/OIP.byWR1yI1YzNw1ItEhwmxmQHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://tse4.mm.bing.net/th/id/OIP.J4mlyasJOSOvk-KqlruHpQHaE8?r=0&w=1619&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3"
+    ];
+
+    let currentIndex = 0;
+    const slideshow = document.getElementById("slideshow-image");
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      slideshow.classList.add("opacity-0"); // fade out
+      setTimeout(() => {
+        slideshow.src = images[currentIndex];
+        slideshow.classList.remove("opacity-0"); // fade in
+      }, 500); // match transition duration
+    }, 3000); // change every 1 sec
+  });
+</script>   
 
 </body>
 
