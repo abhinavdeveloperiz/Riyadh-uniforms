@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    <!-- Replace the existing viewport meta tag with this updated one -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riyadh Uniform - Premium Uniform Solutions</title>
 
     <!-- Tailwind CSS -->
@@ -47,6 +47,42 @@
 
 
     <style>
+        /* white screen issue  */
+        /* Add these styles to your existing style section */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+                width: 100%;
+            }
+
+            .section-padding {
+                padding: 3rem 1rem;
+            }
+
+            #mobile-menu {
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: white;
+                z-index: 50;
+            }
+
+            /* Fix for hero section on mobile */
+            #home {
+                min-height: 100vh;
+                padding-top: 5rem;
+            }
+
+            /* Ensure content is visible on mobile */
+            .max-w-7xl {
+                width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        /* white scrren issue  */
         body {
             font-family: 'Inter', sans-serif;
             user-select: none;
@@ -83,7 +119,65 @@
             }
         }
     </style>
+
+
+
+
+
+<!-- Add this CSS in your existing style tag -->
+<style>
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    /* Custom hover effect */
+    .action-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .fixed.bottom-6.right-6 {
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+    }
+</style>
 </head>
+
+
+
+<!-- Fixed Action Buttons -->
+<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+966123456789" 
+       class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 animate-bounce"
+       target="_blank"
+       title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Call Button -->
+    <a href="tel:+966123456789" 
+       class="bg-blue-600 hover:bg-blue-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 animate-pulse"
+       title="Call Us">
+        <i class="fas fa-phone text-xl"></i>
+    </a>
+</div>
+
 
 
 
@@ -92,7 +186,7 @@
 <body class="bg-white">
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-100 fixed-top">
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-100 fixed-top" ">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -408,9 +502,9 @@
                 <div class="relative">
                     <img src="https://images.jdmagicbox.com/quickquotes/images_main/kids-school-uniform-color-navy-blue-type-plain-2219969538-h65i08os.jpg"
                         alt="About Us" class="rounded-2xl shadow-2xl">
-                    <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="hidden lg:block absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-lg">
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-blue-600">15+</div>
+                            <div class="d-none d-lg-block text-3xl font-bold text-blue-600">15+</div>
                             <div class="text-gray-600">Years Experience</div>
                         </div>
                     </div>
@@ -727,138 +821,93 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top"
-        class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+  
 
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000, // animation duration in ms
-            once: true,     // animate only once
-        });
-    </script>
-
-
-
-    <!-- JavaScript -->
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = mobileMenuBtn.querySelector('i');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.className = 'fas fa-bars text-xl';
-            } else {
-                menuIcon.className = 'fas fa-times text-xl';
-            }
+        // Page load handler
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            document.getElementById('loader').style.display = 'none';
         });
 
-        // Smooth Scrolling for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        // Improved mobile menu
+        const mobileMenu = {
+            button: document.getElementById('mobile-menu-btn'),
+            menu: document.getElementById('mobile-menu'),
+            isOpen: false,
+            
+            toggle() {
+                this.isOpen = !this.isOpen;
+                this.menu.style.display = this.isOpen ? 'block' : 'none';
+                this.button.setAttribute('aria-expanded', this.isOpen);
+                
+                if (this.isOpen) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
                 }
-                // Close mobile menu if open
-                mobileMenu.classList.add('hidden');
-                menuIcon.className = 'fas fa-bars text-xl';
-            });
-        });
+            },
 
-        // Back to Top Button
-        const backToTopBtn = document.getElementById('back-to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.style.opacity = '1';
-                backToTopBtn.style.pointerEvents = 'auto';
-            } else {
-                backToTopBtn.style.opacity = '0';
-                backToTopBtn.style.pointerEvents = 'none';
+            init() {
+                this.button.addEventListener('click', () => this.toggle());
+                
+                // Close menu on link click
+                this.menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        this.toggle();
+                    });
+                });
             }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Navbar Background Change on Scroll
-        const navbar = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 50) {
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.backdropFilter = 'blur(10px)';
-            } else {
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-                navbar.style.backdropFilter = 'none';
-            }
-        });
-
-        // Animation on Scroll (Simple)
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+        mobileMenu.init();
 
-        // Observe elements for animation
-        document.querySelectorAll('.hover-lift, .bg-white').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
+        // Improved scroll handling
+        const scroll = {
+            navbar: document.querySelector('nav'),
+            backToTop: document.getElementById('back-to-top'),
+            ticking: false,
+
+            update() {
+                const scrollPos = window.scrollY;
+                
+                // Navbar update
+                this.navbar.style.backgroundColor = 
+                    scrollPos > 50 ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 1)';
+                this.navbar.style.backdropFilter = 
+                    scrollPos > 50 ? 'blur(10px)' : 'none';
+                
+                // Back to top button
+                this.backToTop.style.opacity = scrollPos > 300 ? '1' : '0';
+                this.backToTop.style.pointerEvents = scrollPos > 300 ? 'auto' : 'none';
+                
+                this.ticking = false;
+            },
+
+            init() {
+                window.addEventListener('scroll', () => {
+                    if (!this.ticking) {
+                        window.requestAnimationFrame(() => {
+                            this.update();
+                        });
+                        this.ticking = true;
+                    }
+                });
+            }
+        };
+
+        scroll.init();
+
+        // Initialize AOS with better performance
+        AOS.init({
+            duration: 800,
+            once: true,
+            disable: 'mobile'
         });
     </script>
-
-    <!-- slide show  -->
-
-    <!-- Slideshow Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const images = [
-      "https://education.jnto.go.jp/cms/wp-content/uploads/2021/11/school_uniform_01m.jpg",
-      "https://tse1.mm.bing.net/th/id/OIP.byWR1yI1YzNw1ItEhwmxmQHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
-      "https://tse4.mm.bing.net/th/id/OIP.J4mlyasJOSOvk-KqlruHpQHaE8?r=0&w=1619&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3"
-    ];
-
-    let currentIndex = 0;
-    const slideshow = document.getElementById("slideshow-image");
-
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      slideshow.classList.add("opacity-0"); // fade out
-      setTimeout(() => {
-        slideshow.src = images[currentIndex];
-        slideshow.classList.remove("opacity-0"); // fade in
-      }, 500); // match transition duration
-    }, 3000); // change every 1 sec
-  });
-</script>   
-
 </body>
 
 </html>
