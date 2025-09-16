@@ -8,14 +8,17 @@
     <title>Riyadh Uniform - Premium Uniform Solutions in Saudi Arabia</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Riyadh Uniform provides premium quality uniforms in Saudi Arabia for schools, hospitals, corporate, hospitality, and industries. Custom-designed uniforms with high durability, comfort, and modern style.">
-    <meta name="keywords" content="Riyadh Uniform, Uniform supplier Saudi Arabia, School uniforms, Corporate uniforms, Hospital uniforms, Industrial uniforms, Hospitality uniforms, Workwear Riyadh, Custom uniforms">
+    <meta name="description"
+        content="Riyadh Uniform provides premium quality uniforms in Saudi Arabia for schools, hospitals, corporate, hospitality, and industries. Custom-designed uniforms with high durability, comfort, and modern style.">
+    <meta name="keywords"
+        content="Riyadh Uniform, Uniform supplier Saudi Arabia, School uniforms, Corporate uniforms, Hospital uniforms, Industrial uniforms, Hospitality uniforms, Workwear Riyadh, Custom uniforms">
     <meta name="author" content="Riyadh Uniform">
     <link rel="canonical" href="https://riyadhuniform.com/" />
 
     <!-- Open Graph (Facebook & LinkedIn) -->
     <meta property="og:title" content="Riyadh Uniform - Premium Uniform Solutions">
-    <meta property="og:description" content="Discover high-quality uniforms for schools, hospitals, corporate, and industries in Saudi Arabia. Riyadh Uniform ensures durability, comfort, and style.">
+    <meta property="og:description"
+        content="Discover high-quality uniforms for schools, hospitals, corporate, and industries in Saudi Arabia. Riyadh Uniform ensures durability, comfort, and style.">
     <meta property="og:image" content="{% static 'images/logo.jpg' %}">
     <meta property="og:url" content="https://riyadhuniform.com/">
     <meta property="og:type" content="website">
@@ -24,14 +27,16 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Riyadh Uniform - Premium Uniform Solutions">
-    <meta name="twitter:description" content="Premium uniforms for schools, healthcare, corporate, and industries in Saudi Arabia. Custom-designed, durable, and stylish.">
+    <meta name="twitter:description"
+        content="Premium uniforms for schools, healthcare, corporate, and industries in Saudi Arabia. Custom-designed, durable, and stylish.">
     <meta name="twitter:image" content="{% static 'images/logo.jpg' %}">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
 
     <!-- AOS Animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -103,9 +108,11 @@
             body {
                 width: 100%;
             }
+
             .section-padding {
                 padding: 3rem 1rem;
             }
+
             #mobile-menu {
                 width: 100%;
                 position: absolute;
@@ -114,10 +121,12 @@
                 background: white;
                 z-index: 50;
             }
+
             #home {
                 min-height: 100vh;
                 padding-top: 5rem;
             }
+
             .max-w-7xl {
                 width: 100%;
                 padding-left: 1rem;
@@ -127,10 +136,19 @@
 
         /* Floating animation */
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
+
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
@@ -255,7 +273,7 @@
 
                         <div class="mt-6 text-center">
                             <h3 class="text-xl font-bold text-gray-100 mb-2">Trusted by 500+ Companies</h3>
-                            <p class="text-gray-100">Delivering excellence since 2010</p>
+                            <p class="text-gray-100">Delivering excellence since 2018</p>
                         </div>
                     </div>
                 </div>
@@ -328,67 +346,121 @@
     <!-- About Section -->
     <section id="about" class="section-padding bg-cover bg-center relative" data-aos="zoom-in"
         style="background-image: url('/static/images/aboutbg.jpg');">
-        <div class="absolute inset-0 bg-white/80"></div> <!-- Overlay for readability -->
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-white/85"></div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Side Content -->
                 <div data-aos="fade-up">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Why Choose Riyadh Uniform?</h2>
-                    <p class="text-lg text-gray-600 mb-8">
-                        With over a decade of experience in the uniform industry, we've built our reputation on quality,
-                        reliability, and exceptional customer service. Our commitment to excellence has made us the
-                        preferred choice for businesses across Saudi Arabia.
-                    </p>
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">About <span class="gradient-text">Riyadh
+                            Uniform</span></h2>
 
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 rounded-full p-3 mr-4">
-                                <i class="fas fa-medal text-blue-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-2">Premium Quality Materials</h3>
-                                <p class="text-gray-600">We source only the finest fabrics that ensure durability,
-                                    comfort, and professional appearance.</p>
-                            </div>
+                    <!-- Split into smaller paragraphs for readability -->
+                    <div class="space-y-4 text-gray-600 text-lg leading-relaxed text-justify">
+                        <!-- Wrapper with limited height -->
+                        <div id="aboutText" class="max-h-64 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p>
+                                Riyadh Uniforms And Advertising is brand under Abyat Al Manara Contracting
+                                Establishment,
+                                which was founded in the year 2018 by Hairiyah Binth Mastour Bin Ali Bin Muhammad.
+                            </p>
+                            <p>
+                                Riyadh Uniforms is focused on bringing World class Tailoring and advertising solutions
+                                in to
+                                the Kingdom Of Saudi Arabia. In the accordance with the Vision 2030, we are committed to
+                                provide all tailoring process to be done inside KSA. Our tailoring facility and showroom
+                                is
+                                located in Riyadh, KSA.
+                            </p>
+                            <p>
+                                Our main Establishment Abyat Al Manara Contracting have multiple branches running in KSA
+                                across different sectors including Contracting, Advertisment, Clothing, Food & Bevarage
+                                etc.
+                            </p>
+                            <p>
+                                In the dynamic and rapidly evolving landscape of Saudi Arabia, where tradition meets
+                                innovation, a professional image is paramount. At Riyadh Uniforms & Advertising, we
+                                understand that a uniform is more than just clothing; it is a powerful statement of
+                                brand
+                                identity, professionalism, and unity. We are a leading provider of high-quality, bespoke
+                                uniform solutions, dedicated to helping businesses across the Kingdom elevate their
+                                brand
+                                presence and empower their teams. Our commitment to exceptional craftsmanship, premium
+                                fabrics, and personalized design ensures that every uniform we create is a perfect blend
+                                of
+                                style, comfort, and durability, tailored to meet the unique needs of our diverse
+                                clients.
+                            </p>
                         </div>
 
-                        <div class="flex items-start">
-                            <div class="bg-green-100 rounded-full p-3 mr-4">
-                                <i class="fas fa-clock text-green-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-2">Fast Turnaround</h3>
-                                <p class="text-gray-600">Quick delivery times without compromising on quality, meeting
-                                    your urgent requirements.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="bg-purple-100 rounded-full p-3 mr-4">
-                                <i class="fas fa-users text-purple-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-2">Expert Team</h3>
-                                <p class="text-gray-600">Our skilled designers and tailors ensure every uniform meets
-                                    the highest standards.</p>
-                            </div>
+                        <!-- Read More button -->
+                        <div class="text-center">
+                            <button id="readMoreBtn"
+                                class="mt-1 px-6 py-2  text-black">
+                                Read More...
+                            </button>
                         </div>
                     </div>
+
+
+
                 </div>
 
-                <div class="relative" data-aos="fade-right">
-                    <img src="{{about.image.url}}"
-                        alt="About Us" class="rounded-2xl shadow-2xl">
+                <!-- Right Side Image -->
+                <div class="relative" data-aos="fade-left">
+                    <img src="{{ about.image.url }}" alt="About Riyadh Uniform"
+                        class="rounded-2xl shadow-2xl w-full object-cover">
+
+                    <!-- Floating Experience Badge -->
                     <div class="hidden lg:block absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-lg">
                         <div class="text-center">
-                            <div class="d-none d-lg-block text-3xl font-bold text-blue-600">15+</div>
-                            <div class="text-gray-600">Years Experience</div>
+                            <div class="text-3xl font-extrabold text-blue-600">7+</div>
+                            <div class="text-gray-600 text-sm">Years Experience</div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Icons Section (below content) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center" data-aos="fade-up">
+
+                <!-- Premium Quality -->
+                <div class="p-6 bg-white/0">
+                    <div class="mx-auto w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+                        <i class="fas fa-medal text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Premium Quality</h3>
+                    <p class="text-gray-600 text-sm">We source only the finest fabrics ensuring durability, comfort, and
+                        a professional look.</p>
+                </div>
+
+                <!-- Fast Turnaround -->
+                <div class="p-6 bg-white/0">
+                    <div class="mx-auto w-14 h-14 flex items-center justify-center bg-green-100 rounded-full mb-4">
+                        <i class="fas fa-clock text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Fast Turnaround</h3>
+                    <p class="text-gray-600 text-sm">Quick delivery times without compromising quality, tailored for
+                        your urgent needs.</p>
+                </div>
+
+                <!-- Expert Team -->
+                <div class="p-6 bg-white/0 ">
+                    <div class="mx-auto w-14 h-14 flex items-center justify-center bg-purple-100 rounded-full mb-4">
+                        <i class="fas fa-users text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Expert Team</h3>
+                    <p class="text-gray-600 text-sm">Our skilled designers and tailors deliver uniforms that meet the
+                        highest standards.</p>
+                </div>
+
+            </div>
         </div>
     </section>
+
 
 
     <!-- Features Section -->
@@ -755,6 +827,23 @@
             delay: 50,
             mirror: false,
             easing: 'ease-in-out'
+        });
+    </script>
+
+
+    <!-- read more section  -->
+    <script>
+        const aboutText = document.getElementById("aboutText");
+        const readMoreBtn = document.getElementById("readMoreBtn");
+
+        readMoreBtn.addEventListener("click", () => {
+            if (aboutText.classList.contains("max-h-64")) {
+                aboutText.classList.remove("max-h-64");
+                readMoreBtn.textContent = "Read Less";
+            } else {
+                aboutText.classList.add("max-h-64");
+                readMoreBtn.textContent = "Read More";
+            }
         });
     </script>
 </body>
