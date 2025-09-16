@@ -23,3 +23,7 @@ class Gallery(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+class About_image(models.Model):
+    image=models.ImageField(upload_to='about_images/')

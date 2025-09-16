@@ -4,95 +4,81 @@
 
 <head>
     <meta charset="UTF-8" />
-    <!-- Replace the existing viewport meta tag with this updated one -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riyadh Uniform - Premium Uniform Solutions</title>
+    <title>Riyadh Uniform - Premium Uniform Solutions in Saudi Arabia</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Riyadh Uniform provides premium quality uniforms in Saudi Arabia for schools, hospitals, corporate, hospitality, and industries. Custom-designed uniforms with high durability, comfort, and modern style.">
+    <meta name="keywords" content="Riyadh Uniform, Uniform supplier Saudi Arabia, School uniforms, Corporate uniforms, Hospital uniforms, Industrial uniforms, Hospitality uniforms, Workwear Riyadh, Custom uniforms">
+    <meta name="author" content="Riyadh Uniform">
+    <link rel="canonical" href="https://riyadhuniform.com/" />
+
+    <!-- Open Graph (Facebook & LinkedIn) -->
+    <meta property="og:title" content="Riyadh Uniform - Premium Uniform Solutions">
+    <meta property="og:description" content="Discover high-quality uniforms for schools, hospitals, corporate, and industries in Saudi Arabia. Riyadh Uniform ensures durability, comfort, and style.">
+    <meta property="og:image" content="{% static 'images/logo.jpg' %}">
+    <meta property="og:url" content="https://riyadhuniform.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Riyadh Uniform">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Riyadh Uniform - Premium Uniform Solutions">
+    <meta name="twitter:description" content="Premium uniforms for schools, healthcare, corporate, and industries in Saudi Arabia. Custom-designed, durable, and stylish.">
+    <meta name="twitter:image" content="{% static 'images/logo.jpg' %}">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-
-    <!-- aos animation  -->
+    <!-- AOS Animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-
-
     <!-- Favicon & App Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo.jpg' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo.jpg' %}">
-    <link rel="shortcut icon" href="{% static 'images/logo.jpg' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/logo.jpg' %}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/logo.jpg' %}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/logo.jpg' %}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'images/logo.jpg' %}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/logo.jpg' %}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/logo.jpg' %}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/logo.jpg' %}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'images/logo.jpg' %}">
-    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/logo.jpg' %}">
-
-    <!-- Android/Windows Meta -->
     <link rel="icon" sizes="192x192" href="{% static 'images/logo.jpg' %}">
     <meta name="msapplication-TileImage" content="{% static 'images/logo.jpg' %}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- Structured Data (JSON-LD for Local Business SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Riyadh Uniform",
+        "image": "https://riyadhuniform.com/static/images/logo.jpg",
+        "url": "https://riyadhuniform.com",
+        "telephone": "+966552741995",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Riyadh",
+            "addressCountry": "Saudi Arabia"
+        },
+        "description": "Premium uniforms in Saudi Arabia for schools, hospitals, corporate, hospitality, and industries. Custom-designed with high durability, comfort, and style.",
+        "sameAs": [
+            "https://www.facebook.com/riyadhuniform",
+            "https://www.instagram.com/riyadhuniform"
+        ]
+    }
+    </script>
 
-
+    <!-- Custom Styles -->
     <style>
-        /* white screen issue  */
-        /* Add these styles to your existing style section */
-        @media (max-width: 768px) {
-            body {
-                overflow-x: hidden;
-                width: 100%;
-            }
-
-            .section-padding {
-                padding: 3rem 1rem;
-            }
-
-            #mobile-menu {
-                width: 100%;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background: white;
-                z-index: 50;
-            }
-
-            /* Fix for hero section on mobile */
-            #home {
-                min-height: 100vh;
-                padding-top: 5rem;
-            }
-
-            /* Ensure content is visible on mobile */
-            .max-w-7xl {
-                width: 100%;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-        }
-
-        /* white scrren issue  */
+        /* General */
         body {
             font-family: 'Inter', sans-serif;
             user-select: none;
-            /* Disable text selection */
             overflow-x: hidden;
-            /* Hide horizontal scroll */
             touch-action: pan-y;
-            /* Prevent horizontal swipe/scroll */
         }
-
 
         .gradient-text {
             background: linear-gradient(135deg, #ff4848, #ff2323);
@@ -114,43 +100,47 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                width: 100%;
+            }
             .section-padding {
-                padding: 3rem 0;
+                padding: 3rem 1rem;
+            }
+            #mobile-menu {
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: white;
+                z-index: 50;
+            }
+            #home {
+                min-height: 100vh;
+                padding-top: 5rem;
+            }
+            .max-w-7xl {
+                width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
             }
         }
-    </style>
 
-
-
-
-
-    <!-- Add this CSS in your existing style tag -->
-    <style>
+        /* Floating animation */
         @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
-
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
 
-        /* Custom hover effect */
+        /* Button hover */
         .action-button:hover {
             transform: scale(1.1);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
-        /* Mobile responsiveness */
         @media (max-width: 768px) {
             .fixed.bottom-6.right-6 {
                 bottom: 1.5rem;
@@ -162,17 +152,18 @@
 
 
 
+
 <!-- Fixed Action Buttons -->
 <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/+966540793218"
+    <a href="https://wa.me/+966552741995"
         class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 animate-bounce"
         target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
     <!-- Call Button -->
-    <a href="tel:+966540793218"
+    <a href="tel:+966552741995"
         class="bg-blue-600 hover:bg-blue-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 animate-pulse"
         title="Call Us">
         <i class="fas fa-phone text-xl"></i>
@@ -189,18 +180,18 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-20 relative">
 
                 <!-- Left Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="#home" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Home</a>
                     <a href="#services"
-                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Services</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</a>
+                        class="text-gray-700 hover:text-red-600 font-medium transition-colors">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-red-600 font-medium transition-colors">About</a>
                 </div>
 
-                <!-- Logo Center -->
-                <div class="flex justify-center mx-6 ml-6">
+                <!-- Logo Center (absolute centering) -->
+                <div class="absolute left-1/2 transform -translate-x-1/2">
                     <a href="#home">
                         <img src="{% static 'images/logo.jpg' %}" alt="Riyadh Uniform Logo" class="w-20 object-contain">
                     </a>
@@ -209,18 +200,18 @@
                 <!-- Right Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#gallery"
-                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Gallery</a>
+                        class="text-gray-700 hover:text-red-600 font-medium transition-colors">Gallery</a>
                     <a href="#contact"
-                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
-                    <a href="tel:+966123456789"
-                        class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full font-medium transition-all duration-300 flex items-center">
+                        class="text-gray-700 hover:text-red-600 font-medium transition-colors">Contact</a>
+                    <a href="tel:+966552741995"
+                        class="bg-blue-600 hover:bg-red-700 text-white px-5 py-2 rounded-full font-medium transition-all duration-300 flex items-center">
                         <i class="fas fa-phone mr-2"></i>Call Now
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-red-600">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -230,18 +221,19 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
             <div class="px-4 py-4 space-y-2 text-center">
-                <a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                <a href="#services" class="block text-gray-700 hover:text-blue-600 font-medium">Services</a>
-                <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium">About</a>
-                <a href="#gallery" class="block text-gray-700 hover:text-blue-600 font-medium">Gallery</a>
-                <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-                <a href="tel:+966123456789"
+                <a href="#home" class="block text-gray-700 hover:text-red-600 font-medium">Home</a>
+                <a href="#services" class="block text-gray-700 hover:text-red-600 font-medium">Services</a>
+                <a href="#about" class="block text-gray-700 hover:text-red-600 font-medium">About</a>
+                <a href="#gallery" class="block text-gray-700 hover:text-red-600 font-medium">Gallery</a>
+                <a href="#contact" class="block text-gray-700 hover:text-red-600 font-medium">Contact</a>
+                <a href="tel:+966552741995"
                     class="block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full font-medium transition-all duration-300 mx-auto w-max">
                     <i class="fas fa-phone mr-2"></i>Call Now
                 </a>
             </div>
         </div>
     </nav>
+
 
 
     <!-- Hero Section -->
@@ -313,8 +305,9 @@
                     <!-- Image Section (Portrait Style) -->
                     <div class="w-full h-[350px] overflow-hidden relative bg-gray-100">
                         <img src="{{ s.image.url }}" alt="{{ s.name }}"
-                            class="w-full h-full object-cover hover:scale-105 transform transition duration-300 ease-in-out">
+                            class="w-full h-full object-cover object-top hover:scale-105 transform transition duration-300 ease-in-out">
                     </div>
+
 
                     <!-- Content Section -->
                     <div class="p-6 text-center">
@@ -334,7 +327,7 @@
 
     <!-- About Section -->
     <section id="about" class="section-padding bg-cover bg-center relative" data-aos="zoom-in"
-        style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.xTaRa3rMxgsXZn0IVKIJYgHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');">
+        style="background-image: url('/static/images/aboutbg.jpg');">
         <div class="absolute inset-0 bg-white/80"></div> <!-- Overlay for readability -->
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -384,7 +377,7 @@
                 </div>
 
                 <div class="relative" data-aos="fade-right">
-                    <img src="https://images.jdmagicbox.com/quickquotes/images_main/kids-school-uniform-color-navy-blue-type-plain-2219969538-h65i08os.jpg"
+                    <img src="{{about.image.url}}"
                         alt="About Us" class="rounded-2xl shadow-2xl">
                     <div class="hidden lg:block absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-lg">
                         <div class="text-center">
@@ -460,7 +453,7 @@
                 {% for g in gallery %}
                 <div class="group relative overflow-hidden rounded-2xl hover-lift" data-aos="zoom-in">
                     <img src="{{g.image.url}}" alt="School Uniforms"
-                        class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        class="w-full h-64 object-top object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="absolute bottom-4 left-4 text-white">
@@ -492,8 +485,8 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-gray-900">Phone</h3>
-                                <a href="tel:+966540793218" class="text-blue-600 font-semibold hover:text-blue-700">
-                                    +966 540 793 218
+                                <a href="tel:+966552741995" class="text-blue-600 font-semibold hover:text-blue-700">
+                                    0552741995
                                 </a>
                             </div>
                         </div>
@@ -506,7 +499,8 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-gray-900">Address</h3>
-                                <p class="text-gray-600">Riyadh Ksa</p>
+                                <p class="text-gray-600">Jareer Street,Al Malaz,Riyadh
+                                    Saudi Arabia</p>
                             </div>
                         </div>
                     </div>
@@ -542,7 +536,7 @@
 
                 <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3482.4847535515423!2d46.822529!3d24.725192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e1!3m2!1sen!2sus!4v1757586923552!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.9561816930072!2d46.740324099999995!3d24.672566800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f05aabb9695cd%3A0x9e15015d1bd4818!2sRiyadh%20Uniforms!5e1!3m2!1sen!2sin!4v1758000709901!5m2!1sen!2sin"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
@@ -551,7 +545,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-gradient-to-r from-red-600 to-red-600 py-20">
+    <section class="bg-gradient-to-r from-red-600 to-red-600 py-20" data-aos="fade-right">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -559,7 +553,7 @@
                 organization.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+966123456789"
+                <a href="tel:+966552741995"
                     class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                     <i class="fas fa-phone mr-2"></i>
                     Call Now
@@ -587,7 +581,7 @@
                             <i class="fab fa-facebook-f"></i>
                         </a>
 
-                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-colors">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-red-600 transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
 
@@ -624,21 +618,21 @@
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt text-blue-400 mr-3 mt-1"></i>
                             <div>
-                                <p class="text-gray-400">King Fahd Street</p>
-                                <p class="text-gray-400">Riyadh, Saudi Arabia</p>
+                                <p class="text-gray-400">Jareer Street,Al Malaz,Riyadh
+                                    Saudi Arabia</p>
                             </div>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone text-blue-400 mr-3"></i>
-                            <a href="tel:+966123456789" class="text-gray-400 hover:text-white transition-colors">
-                                +966 123 456 789
+                            <a href="tel:+966552741995" class="text-gray-400 hover:text-white transition-colors">
+                                0552741995
                             </a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope text-blue-400 mr-3"></i>
                             <a href="mailto:info@riyadhuniform.com"
                                 class="text-gray-400 hover:text-white transition-colors">
-                                info@riyadhuniform.com
+                                mubz394@gmail.com
                             </a>
                         </li>
                         <li class="flex items-center">
@@ -656,8 +650,9 @@
             <div class="border-t border-gray-800 mt-12 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="text-gray-400 mb-4 md:mb-0">
-                        <p>&copy; 2024 Riyadh Uniform. All rights reserved.</p>
+                        <p>&copy; {% now "Y" %} Riyadh Uniform. All rights reserved.</p>
                     </div>
+
                     <div class="flex space-x-6 text-center">
                         <a href="https://inspirezesttechnologies.com/"
                             class="text-gray-400 hover:text-white transition-colors">Designed and Developed by <span

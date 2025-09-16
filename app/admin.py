@@ -1,10 +1,64 @@
 from django.contrib import admin
-from .models import Banner, BannerImage, Service, Gallery
+from django.utils.html import format_html
+from .models import Banner, BannerImage, Service, Gallery,About_image
 
-# Register your models here.
+admin.site.site_header = "Riyadh Uniform"
+admin.site.site_title = "Riyadh Uniform Admin"
+admin.site.index_title = "Welcome to Riyadh Uniform Admin Portal"
 
-admin.site.register(Banner)
-admin.site.register(BannerImage)
-admin.site.register(Service)
-admin.site.register(Gallery)
 
+# Reusable image preview
+def image_preview(obj):
+    if obj.image:
+        return format_html('<img src="{}" width="100" style="border-radius:6px;" />', obj.image.url)
+    return "No Image"
+
+
+@admin.register(About_image)
+class AboutImageAdmin(admin.ModelAdmin):
+    list_display = ("id", "image_preview",)
+    readonly_fields = ("image_preview",)
+
+    def image_preview(self, obj):
+        return image_preview(obj)
+    image_preview.short_description = "Preview"
+
+
+@admin.register(Banner)
+class BannerAdmin(admin.ModelAdmin):
+    list_display = ("id", "image_preview",)
+    readonly_fields = ("image_preview",)
+
+    def image_preview(self, obj):
+        return image_preview(obj)
+    image_preview.short_description = "Preview"
+
+
+@admin.register(BannerImage)
+class BannerImageAdmin(admin.ModelAdmin):
+    list_display = ("id", "image_preview",)
+    readonly_fields = ("image_preview",)
+
+    def image_preview(self, obj):
+        return image_preview(obj)
+    image_preview.short_description = "Preview"
+
+
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "description", "image_preview")
+    readonly_fields = ("image_preview",)
+
+    def image_preview(self, obj):
+        return image_preview(obj)
+    image_preview.short_description = "Preview"
+
+
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ("id", "title", "image_preview")
+    readonly_fields = ("image_preview",)
+
+    def image_preview(self, obj):
+        return image_preview(obj)
+    image_preview.short_description = "Preview"
