@@ -254,9 +254,15 @@
 
 
 
+
+
+
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center pt-20 bg-cover bg-center bg-no-repeat"
         style="background-image: url('{{banner.image.url}}');">
+
+
+
 
         <!-- Overlay for readability -->
         <div class="absolute inset-0 bg-black/50"></div>
@@ -302,6 +308,16 @@
                 </div>
 
             </div>
+
+            {% if messages %}
+            <div class="max-w-3xl mx-auto my-6" data-aos="slide-right">
+                {% for message in messages %}
+                <div class="p-4 rounded-lg {{ message.tags }} bg-green-100 text-green-800">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
     </section>
 
@@ -611,6 +627,75 @@
         </div>
     </section>
 
+
+
+
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Header -->
+                <div class="bg-gradient-to-r from-red-600 to-red-600 px-6 py-8 text-center">
+                    <h3 class="text-2xl font-semibold text-white">Send us a Message</h3>
+                </div>
+
+                <!-- Form -->
+                <div class="p-8">
+                    <form action="" method="post" class="space-y-8">
+                        {% csrf_token %}
+
+                        <!-- Name -->
+                        <div class="relative">
+                            <input type="text" id="name" name="name" required
+                                class="peer w-full rounded-lg border border-gray-300 px-4 pt-5 pb-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 placeholder-transparent"
+                                placeholder="Your Name" />
+                            <label for="name"
+                                class="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600">
+                                Name
+                            </label>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="relative">
+                            <input type="tel" id="phone" name="phone" required
+                                class="peer w-full rounded-lg border border-gray-300 px-4 pt-5 pb-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 placeholder-transparent"
+                                placeholder="Phone Number" />
+                            <label for="phone"
+                                class="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600">
+                                Phone
+                            </label>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="relative">
+                            <textarea id="message" name="message" rows="5" required
+                                class="peer w-full rounded-lg border border-gray-300 px-4 pt-5 pb-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 placeholder-transparent"
+                                placeholder="Write your message here..."></textarea>
+                            <label for="message"
+                                class="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600">
+                                Message
+                            </label>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="text-center">
+                            <button type="submit"
+                                class="w-full sm:w-auto px-8 py-3 rounded-lg bg-gradient-to-r from-red-600 to-purple-600 hover:bg-gradient-to-r hover:from-purple-600  hover:to-red-600 text-white font-semibold shadow-lg hover:scale-105 transform transition duration-300 ease-in-out focus:ring-2 focus:ring-blue-500">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
     <!-- CTA Section -->
     <section class="bg-gradient-to-r from-red-600 to-red-600 py-20" data-aos="fade-right">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -705,8 +790,8 @@
                         <li class="flex items-center">
                             <i class="fas fa-clock text-blue-400 mr-3"></i>
                             <div class="text-gray-400">
-                                <p>Mon - Sat: 9AM - 8PM</p>
-                                <p class="text-red-400">Closed Sunday</p>
+                                <p>09:00 AM - 10:30 PM</p>
+                                <p class="text-red-400">Closed Friday</p>
                             </div>
                         </li>
                     </ul>

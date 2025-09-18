@@ -27,3 +27,12 @@ class Gallery(models.Model):
 
 class About_image(models.Model):
     image=models.ImageField(upload_to='about_images/')
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=15)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name

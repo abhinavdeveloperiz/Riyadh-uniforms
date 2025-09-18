@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import Banner, BannerImage, Service, Gallery,About_image
+from .models import Banner, BannerImage, Service, Gallery,About_image,Contact
 
 admin.site.site_header = "Riyadh Uniform"
 admin.site.site_title = "Riyadh Uniform Admin"
 admin.site.index_title = "Welcome to Riyadh Uniform Admin Portal"
 
+admin.site.register(Contact)
 
 # Reusable image preview
 def image_preview(obj):
