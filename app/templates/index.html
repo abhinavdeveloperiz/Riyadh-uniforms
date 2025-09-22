@@ -268,7 +268,7 @@
         <div class="absolute inset-0 bg-black/50"></div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            
+
             {% if messages %}
             <div class="max-w-3xl mx-auto my-6" data-aos="slide-right">
                 {% for message in messages %}
@@ -552,6 +552,61 @@
             </div>
         </div>
     </section>
+
+    <!-- Our Clients section (Tailwind CSS) -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
+            <div class="mb-8 text-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Our Clients</h2>
+                <p class="mt-2 text-sm text-gray-600">Trusted by businesses across industries</p>
+            </div>
+
+            <!-- Cards grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200 overflow-hidden">
+                    <div class="h-44 w-full overflow-hidden">
+                        <img src="/static/client/aramax.jpg" alt="Client 1"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200 overflow-hidden">
+                    <div class="h-44 w-full overflow-hidden">
+                        <img src="/static/client/arab.png" alt="Client 2"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200 overflow-hidden">
+                    <div class="h-44 w-full overflow-hidden">
+                        <img src="/static/client/sasa.jpg" alt="Client 3"
+                            class="w-full h-full  transform group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200 overflow-hidden">
+                    <div class="h-44 w-full overflow-hidden">
+                        <img src="/static/client/shaklan.jpg" alt="Client 4"
+                            class="w-full h-full  transform group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-white">
