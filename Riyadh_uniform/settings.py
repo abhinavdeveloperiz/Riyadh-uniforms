@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -139,3 +140,22 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+JAZZMIN_SETTINGS = {
+    # Core Settings
+    "site_title": "Riyadh Uniform",
+    "site_header": "Riyadh Uniform",
+    "site_brand": "Riyadh Uniform",
+    "site_logo_classes": "img-circle",
+    "site_icon": "images/logo.jpg",
+    "welcome_sign": "Welcome to Riyadh Uniform Administration",
+    "copyright": "Riyadh Uniform © 2025",
+
+   
+   
+}
+
+
+

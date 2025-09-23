@@ -6,7 +6,13 @@ admin.site.site_header = "Riyadh Uniform"
 admin.site.site_title = "Riyadh Uniform Admin"
 admin.site.index_title = "Welcome to Riyadh Uniform Admin Portal"
 
-admin.site.register(Contact)
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "phone", "message", "submitted_at")
+    list_filter = ("submitted_at",)  # Adds a filter by date in the sidebar
+    search_fields = ("name", "phone", "message")  # Optional: search box
+    ordering = ("-submitted_at",)  # Show newest first
+
 
 # Reusable image preview
 def image_preview(obj):
@@ -63,3 +69,9 @@ class GalleryAdmin(admin.ModelAdmin):
     def image_preview(self, obj):
         return image_preview(obj)
     image_preview.short_description = "Preview"
+
+
+
+
+
+
